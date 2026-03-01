@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Add Course</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<header>
+  <h1>Add a Course</h1>
+  <nav>
+    <a href="index.html">Courses</a>
+    <a href="login.html">Logout</a>
+  </nav>
+</header>
+<main>
+  <form class="course-form">
+    <label>
+      Course Name
+      <input type="text" placeholder="Intro to Programming" />
+    </label>
+
+    <label>
+      Description
+      <textarea placeholder="Course description..."></textarea>
+    </label>
+
+    <label>
+      Subject Area
+      <input type="text" placeholder="Computer Science" />
+    </label>
+
+    <label>
+      Credits
+      <input type="number" min="1" max="6" />
+    </label>
+
+    <button type="submit">Save Course</button>
+  </form>
+</main>
+
+</body>
+</html>

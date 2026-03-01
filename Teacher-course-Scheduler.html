@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Teacher Dashboard | Smart City College</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<header>
+  <h1>Smart City College</h1>
+  <nav>
+    <a href="Teacher-course-Scheduler.html">Manage Courses</a>
+    <a href="login.html">Logout</a>
+  </nav>
+</header>
+
+
+<main>
+
+  <h2>Add a Course</h2>
+
+  <form class="course-form">
+    <label>
+      Course Name
+      <input type="text" placeholder="Intro to Programming" />
+    </label>
+
+    <label>
+      Description
+      <textarea placeholder="Course description..."></textarea>
+    </label>
+
+    <label>
+      Subject Area
+      <input type="text" placeholder="Computer Science" />
+    </label>
+
+    <label>
+      Credits
+      <input type="number" min="1" max="6" />
+    </label>
+
+    <button type="submit">Save Course</button>
+  </form>
+
+  <h2 style="margin-top:3rem;">Current Courses</h2>
+
+  <div class="course-list">
+    <article class="course-card">
+      <h3>Intro to Programming</h3>
+      <p>Computer Science | 3 Credits</p>
+      <button class="danger">Remove</button>
+    </article>
+  </div>
+
+  <div class="course-list">
+    <article class="course-card">
+      <h3>College Algebra</h3>
+      <p>Mathematics | 4 Credits</p>
+      <button class="danger">Remove</button>
+    </article>
+  </div>
+
+</main>
+
+<footer>
+  <p>© 2026 Smart City College</p>
+</footer>
+
+</body>
+</html>
