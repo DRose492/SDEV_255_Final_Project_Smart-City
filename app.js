@@ -68,6 +68,7 @@ router.delete('/courses/:id', async (req, res) => {
 
 
 app.use("/api", router)
+const PORT = process.env.PORT || 3000;
 app.listen(3000, () => {
     console.log("listening")
 })
