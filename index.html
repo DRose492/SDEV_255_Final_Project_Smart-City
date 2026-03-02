@@ -44,7 +44,7 @@
 <script>
 // zac added this - load courses for students
 async function loadCourses() {
-  const res = await fetch("http://localhost:3000/api/courses");
+  const res = await fetch("https://smart-city-5ip4.onrender.com/api/courses");
   const courses = await res.json();
 
   const list = document.querySelector(".course-list");
@@ -77,3 +77,4 @@ window.onload = loadCourses;
 
 </body>
 </html>
+
