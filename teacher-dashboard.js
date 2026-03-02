@@ -13,7 +13,7 @@ if (role !== "teacher") {
 // LOAD COURSES
 // ------------------------------
 async function loadCourses() {
-    const res = await fetch("http://localhost:3000/api/courses");
+    const res = await fetch("https://smart-city-5ip4.onrender.com/api/courses");
     const courses = await res.json();
 
     const container = document.getElementById("courseList");
@@ -60,7 +60,7 @@ async function createCourse() {
     const credits = document.getElementById("credits").value;
     const description = document.getElementById("description").value;
 
-    const res = await fetch("http://localhost:3000/api/courses", {
+    const res = await fetch("https://smart-city-5ip4.onrender.com/api/courses", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -82,7 +82,7 @@ async function createCourse() {
 // DELETE COURSE (OWNER ONLY)
 // ------------------------------
 async function deleteCourse(id) {
-    const res = await fetch(`http://localhost:3000/api/courses/${id}`, {
+    const res = await fetch(`https://smart-city-5ip4.onrender.com/api/courses/${id}`, {
         method: "DELETE",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -112,7 +112,7 @@ function openEditForm(course) {
 async function saveEdit() {
     const id = document.getElementById("editId").value;
 
-    const res = await fetch(`http://localhost:3000/api/courses/${id}`, {
+    const res = await fetch(`https://smart-city-5ip4.onrender.com/api/courses/${id}`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -130,3 +130,4 @@ async function saveEdit() {
     document.getElementById("editForm").style.display = "none";
     loadCourses();
 }
+
