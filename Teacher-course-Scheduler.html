@@ -114,7 +114,7 @@ async function loadCourses() {
 }
 
 async function deleteCourse(id) {
-  await fetch(`http://127.0.0.1:3000/api/courses/${id}`, {
+  await fetch(`https://smart-city-5ip4.onrender.com/api/courses/${id}`, {
     method: "DELETE",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ owner: teacherEmail })
@@ -147,7 +147,7 @@ async function saveEdit() {
     owner: teacherEmail
   };
 
-  await fetch(`http://127.0.0.1:3000/api/courses/${editingCourseId}`, {
+  await fetch(`https://smart-city-5ip4.onrender.com/api/courses/${editingCourseId}`, {
     method: "PUT",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(updatedCourse)
@@ -168,7 +168,7 @@ document.querySelector(".course-form").addEventListener("submit", async (e) => {
     owner: teacherEmail
   };
 
-  await fetch("http://127.0.0.1:3000/api/courses", {
+  await fetch("https://smart-city-5ip4.onrender.com/api/courses", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(course)
@@ -180,4 +180,5 @@ document.querySelector(".course-form").addEventListener("submit", async (e) => {
 
 </body>
 </html>
+
 
