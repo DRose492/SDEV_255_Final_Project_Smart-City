@@ -15,27 +15,10 @@
   </nav>
 </header>
 
-
 <main>
   <h2>Available Courses</h2>
 
-  <div class="course-list">
-    <article class="course-card">
-      <h3>Intro to Programming</h3>
-      <p><strong>Subject:</strong> Computer Science</p>
-      <p><strong>Credits:</strong> 3</p>
-      <p>Learn programming fundamentals.</p>
-      <button>Add to Schedule</button>
-    </article>
-
-    <article class="course-card">
-      <h3>College Algebra</h3>
-      <p><strong>Subject:</strong> Mathematics</p>
-      <p><strong>Credits:</strong> 4</p>
-      <p>Foundational algebra concepts.</p>
-      <button>Add to Schedule</button>
-    </article>
-  </div>
+  <div class="course-list"></div>
 
   <h2 style="margin-top:3rem;">My Schedule</h2>
 
@@ -56,6 +39,41 @@
 <footer>
   <p>© 2026 Smart City College</p>
 </footer>
+
+<!-- zac added this -->
+<script>
+// zac added this - load courses for students
+async function loadCourses() {
+  const res = await fetch("http://localhost:3000/api/courses");
+  const courses = await res.json();
+
+  const list = document.querySelector(".course-list");
+  list.innerHTML = ""; // zac added this
+
+  courses.forEach(course => {
+    const card = document.createElement("article");
+    card.classList.add("course-card");
+
+    card.innerHTML = `
+      <h3>${course.title}</h3>
+      <p><strong>Subject:</strong> ${course.subject}</p>
+      <p><strong>Credits:</strong> ${course.credits}</p>
+      <p>${course.description}</p>
+      <button onclick="addToSchedule('${course._id}')">Add to Schedule</button>
+    `;
+
+    list.appendChild(card);
+  });
+}
+
+// zac added this - placeholder for schedule system
+function addToSchedule(id) {
+  alert("Schedule system coming next! Course ID: " + id);
+}
+
+// zac added this - load courses when page opens
+window.onload = loadCourses;
+</script>
 
 </body>
 </html>

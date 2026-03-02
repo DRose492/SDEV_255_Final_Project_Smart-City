@@ -1,4 +1,5 @@
-const mongoose = require("mongoose")
-mongoose.connect("mongodb+srv://smartcity:smartcity255@smartcityfinalproject.nicvwbc.mongodb.net/?appName=smartcityfinalproject")
+// db.js disabled — connection handled in app.js
 
-module.exports = mongoose
+// const mongoose = require("mongoose");
+// mongoose.connect("mongodb+srv://...");
+// module.exports = mongoose;
