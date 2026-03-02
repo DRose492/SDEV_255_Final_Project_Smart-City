@@ -77,7 +77,7 @@ window.onload = () => {
 };
 
 async function loadCourses() {
-  const res = await fetch("http://127.0.0.1:3000/api/courses");
+  const res = await fetch("https://smart-city-5ip4.onrender.com/api/courses");
   const courses = await res.json();
 
   const list = document.getElementById("courseList");
@@ -180,3 +180,4 @@ document.querySelector(".course-form").addEventListener("submit", async (e) => {
 
 </body>
 </html>
+
